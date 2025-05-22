@@ -6,11 +6,22 @@
     <title>THfor</title>
 </head>
 <body>
+    <h1>Bài 1:</h1>
     <script>
         for (let i = 1; i <= 5; i++)
         {
-            console.log("The number is " + i);
+            document.write("The number is " + i + "<br>");
         }
+    </script>
+    <h1>Bài 2</h1>
+    <script>
+        let sum = 0;
+        let input = +prompt("Nhập số lớn hơn 0: ");
+        for (let i = 1; i <= input; i++)
+        {
+            sum += i;
+        }
+        alert(sum);
     </script>
 </body>
 </html>
