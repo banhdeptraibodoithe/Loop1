@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While-Loop</title>
+</head>
+<body>
+    <script>
+        let sum = 0, a = 0;
+        while(a != -1)
+        {
+            a = +prompt("Nhập số a: ");
+            if (a == -1)
+                break;
+            alert("vừa nhập vào số: "+ a);
+            sum += a;
+        }
+        alert("Tổng các số vừa nhập: "+ sum);
+        let width = 1;
+        while (width < 100)
+        {
+            document.write("<hr width =" + width +"%>");
+            width++;
+        }
+        
+    </script>
+</body>
+</html>
