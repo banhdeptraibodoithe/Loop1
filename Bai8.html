@@ -12,8 +12,9 @@
     <script>
         function playGame()
         {
-            let range = +prompt("Chọn khoảng lớn nhất mà bạn muốn đoán: ");
-            let winnum = Math.floor(Math.random() * range) + 1;
+            let rangeMin = +prompt("Chọn khoảng nhỏ nhất mà bạn muốn đoán: ");
+            let rangeMax = +prompt("Chọn khoảng lớn nhất mà bạn muốn đoán: ");
+            let winnum = Math.floor(Math.random() * (rangeMax - rangeMin + 1) + rangeMin);
             console.log(winnum);
             let guess = 3;
             while (guess > 0)
@@ -27,12 +28,12 @@
                 else if (ans < winnum)
                 {
                     guess--;
-                    alert("Bạn cần đoán lớn hơn, còn " + guess + " lượt đoán");
+                    alert("Bạn cần đoán số lớn hơn, còn " + guess + " lượt đoán");
                 }
                 else
                 {
                     guess--;
-                    alert("Bạn cần đoán bé hơn, còn " + guess + " lượt đoán");
+                    alert("Bạn cần đoán số bé hơn, còn " + guess + " lượt đoán");
                 }
             }
             alert("Rất tiếc, bạn đã hết lượt đoán, số chính xác là: " + winnum);
