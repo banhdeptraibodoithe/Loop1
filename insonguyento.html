@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In số nguyên tố</title>
+</head>
+<body>
+    <script>
+        let input = +prompt("Nhập số lượng số nguyên tố muốn in:");
+        let count = 0;
+        let nt = 2;
+        document.write("<h1>Đây là " + input + " số nguyên tố</h1>");
+        if (input >= 1)
+        {
+            document.write("<p>"+ nt + "</p>");
+            count++;
+            nt++;
+        }
+        while(count < input)
+        {
+            for (let i = 2; i < nt; i++)
+            {
+                if (nt % i == 0)
+                {
+                    nt++;
+                    break;   
+                }
+                if (i == nt - 1 && nt % i != 0)
+                {
+                    document.writeln("<p>"+nt+"</p>");
+                    count++;
+                    nt++;
+                    break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
