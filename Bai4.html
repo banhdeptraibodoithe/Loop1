@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibo(p2)</title>
+</head>
+<body>
+    <script>
+        let a = 0, b = 1;
+        while (true)
+        {
+            let temp = a + b;
+            if (temp % 5 == 0)
+            {
+                alert("Số đầu tiên trong dãy fibinacci chia hết cho 5 là: "+ temp);
+                break;
+            }
+            a = b;
+            b = temp;
+        }
+    </script>
+</body>
+</html>

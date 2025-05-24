@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán số</title>
+</head>
+<body>
+    <center>
+        <button onclick="playGame()">Play!!!</button>
+    </center>
+    <script>
+        function playGame()
+        {
+            let range = +prompt("Chọn khoảng lớn nhất mà bạn muốn đoán: ");
+            let winnum = Math.floor(Math.random() * range) + 1;
+            console.log(winnum);
+            let guess = 3;
+            while (guess > 0)
+            {
+                let ans = +prompt("Nhập số bạn đoán: ");
+                if (ans == winnum)
+                {
+                    alert("Chúc mừng bạn đã đoán chính xác !");
+                    return;
+                }
+                else if (ans < winnum)
+                {
+                    guess--;
+                    alert("Bạn cần đoán lớn hơn, còn " + guess + " lượt đoán");
+                }
+                else
+                {
+                    guess--;
+                    alert("Bạn cần đoán bé hơn, còn " + guess + " lượt đoán");
+                }
+            }
+            alert("Rất tiếc, bạn đã hết lượt đoán, số chính xác là: " + winnum);
+        }
+    </script>
+</body>
+</html>

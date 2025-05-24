@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng 30 số chia hết cho 7 đầu tiên</title>
+</head>
+<body>
+    <script>
+        let sum = 0, count = 30, i = 1;
+        while(count > 0)
+        {
+            if (i % 7 == 0)
+            {
+                sum += i;
+                console.log(i);
+                count--;
+            }
+            i++;
+        }
+        alert("Tổng của " + count + " số chia hết cho 7 đầu tiên trong các số tự nhiên là: " + sum);
+    </script>
+</body>
+</html>

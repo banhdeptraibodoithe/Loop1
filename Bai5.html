@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibo(p3)</title>
+</head>
+<body>
+    <script>
+        let a = 0, b = 1, count = 18, sum = a + b;
+        while (count > 0)
+        {
+            let temp = a + b;
+            sum += temp;
+            a = b;
+            b = temp;
+            count--;
+        }
+        alert("Tổng của 20 số đầu tiên trong dãy fibinacci là: " +sum);
+    </script>
+</body>
+</html>
