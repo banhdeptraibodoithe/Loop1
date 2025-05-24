@@ -13,7 +13,7 @@
         document.write("<h1>Đây là " + input + " số nguyên tố</h1>");
         if (input >= 1)
         {
-            document.write("<p>"+ nt + "</p>");
+            document.write("<br>"+ nt);
             count++;
             nt++;
         }
@@ -28,7 +28,7 @@
                 }
                 if (i == nt - 1 && nt % i != 0)
                 {
-                    document.writeln("<p>"+nt+"</p>");
+                    document.writeln("<br>"+nt);
                     count++;
                     nt++;
                     break;
