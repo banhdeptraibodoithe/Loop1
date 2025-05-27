@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <script>
+        let a = 0, b = 1;
+        let amountFibo = +prompt("Nhập độ dài dãy Fibonacci: ");
+        if (amountFibo <= 0)
+        {
+            alert("Độ dài của dãy không phù hợp hoặc bằng 0.");
+        }
+        else if (amountFibo > 0 && amountFibo < 2)
+        {
+            document.write("<b>"+ "dãy Fibonacci có độ dài " + amountFibo + " là:\n" + "</b>");
+            document.write("'" + a + "'");
+        }
+        else
+        {
+            document.write("<b>"+ "dãy Fibonacci có độ dài " + amountFibo + " là:\n" + "</b>");
+            document.write("'" + a + "'" + ", ");
+            document.write("'" + b + "'" + ", ");
+            amountFibo -= 2;
+            while(amountFibo > 0)
+            {
+                let fibo = a + b;
+                document.write("'" + fibo + "'" + ", ");
+                amountFibo--;
+                a = b;
+                b = fibo;
+            }
+        }
+    </script>
+</body>
+</html>
